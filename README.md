@@ -17,6 +17,24 @@ This is a standanlone version of soajs connect mongo. You can simply use it as a
     var store = new MongoStore(dbConfig)
 
 ### dbConfig
+The dbConfig object looks like this:
+
+    var dbConfig =  {
+        'name' : "",
+        'prefix' : "",
+        'servers' : [{host : "", port : ""} ...],
+        'credentials' : {username : "", password : ""},
+        'URLParam' : { },
+        'extraParam' : {db : {}, server : {}, replSet : {}, mongos: {}},
+        'store': {},
+        'collection': "sessions",
+        'stringify': false,
+        'expireAfter': 1000 * 60 * 60 * 24 * 14 // 2 weeks
+    }
+For a full reference regarding **URLParam** & **extraParam** please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect)
+
+Here is an example of dbConfig object:
+
     var dbConfig = {
         "name": "core_session",
         "prefix": "",
@@ -48,7 +66,7 @@ This is a standanlone version of soajs connect mongo. You can simply use it as a
         'expireAfter': 1000 * 60 * 60 * 24 * 14 // 2 weeks
     }
 
-## Example
+## A simple example
 
     var express = require('express');
     var session = require('express-session');
@@ -96,9 +114,7 @@ This is a standanlone version of soajs connect mongo. You can simply use it as a
     };
 
     app.use(session(sessionConfig));
-
-
-For a full reference regarding dbConfig please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect)
+    ...
 
 
 
