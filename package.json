@@ -29,7 +29,10 @@
     "jshint" : "*",
     "lodash": "*",
     "mocha" : "*",
-    "request" : "*"
+    "request" : "*",
+    "express" : "*",
+    "cookie-parser" : "*",
+    "express-session" : "*"
   },
   "dependencies": {
     "mongoskin" : "*"

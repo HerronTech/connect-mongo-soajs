@@ -1,5 +1,9 @@
 # connect-mongo-soajs
+[![Build Status](https://travis-ci.org/soajs/connect-mongo-soajs.svg?branch=master)](https://travis-ci.org/soajs/connect-mongo-soajs)
+[![Coverage Status](https://coveralls.io/repos/soajs/connect-mongo-soajs/badge.png)](https://coveralls.io/r/soajs/connect-mongo-soajs)
+
 ### MongoDB session store for Express and Connect
+
 Fed up from not being able to find a decent mongo store with full control over mongo configuration including replica set support and not face a race condition because mongo connections are not being handled the right way.
 
 Connect-mongo-soajs is a store that gives you full control over mongo configuration. Enjoy an unleashed reliable mongo store :)
