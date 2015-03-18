@@ -28,7 +28,8 @@
     "grunt-coveralls" : "*",
     "jshint" : "*",
     "lodash": "*",
-    "mocha" : "*"
+    "mocha" : "*",
+    "request" : "*"
   },
   "dependencies": {
     "mongoskin" : "*"
