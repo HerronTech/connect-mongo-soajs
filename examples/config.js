@@ -5,7 +5,7 @@ module.exports = {
       "secret" : "this is your cookie secrert shhhhh"
     },
     "sessionConfig" :{
-        "name": "soajsID",
+        "name": "myAppId",
         "secret": "this is your session secret shhhhhh",
         "cookie": {"path": '/', "httpOnly": true, "secure": false, "domain": "localhost", "maxAge": null},
         "resave": false,

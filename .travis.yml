@@ -1,0 +1,13 @@
+language: node_js
+
+node_js: 0.10
+
+addons:
+  hosts:
+    - localhost
+
+before_script:
+  - npm install -g grunt-cli
+
+after_success:
+  - grunt coverage

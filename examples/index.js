@@ -16,11 +16,11 @@ app.use(session(config.sessionConfig));
 
 app.get ("/store", function (req, res, next){
     req.session.myservice = req.query;
-    res.json ({"done":true, "stored": req.query});
+    res.json ({"result":true, "stored": req.query});
 });
 
 app.get ("/print", function (req, res, next){
-    res.json (req.session.myservice);
+    res.json ({"result":true, "stored": req.session.myservice});
 });
 
 app.listen(3000, function (err) {
