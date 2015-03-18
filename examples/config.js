@@ -36,7 +36,6 @@ module.exports = {
                 "auto_reconnect": true
             }
         },
-        'store': {},
         "collection": "sessions",
         'stringify': false,
         'expireAfter': 1000 * 60 * 60 * 24 * 14 // 2 weeks

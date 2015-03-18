@@ -41,7 +41,4 @@ app.get("/clear", function (req, res, next) {
     });
 });
 
-app.listen(3000, function (err) {
-    if (err)
-        console.log(err);
-});
+app.listen(3000);
