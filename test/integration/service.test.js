@@ -60,6 +60,17 @@ describe("connect mongo soajs test", function() {
 		}, 1000);			
 	});
 
+    describe("clear session - test", function() {
+        it('success ', function(done) {
+            var params = {};
+            executeMyRequest(params, 'clear', 'get', function(body, response) {
+                assert.ok(body);
+                assert.equal(body.result, true);
+                assert.ok(body.clear);
+                done();
+            });
+        });
+    });
 	describe("store in session - test", function() {
 		it('success ', function(done) {
 			var params = {
@@ -68,15 +79,12 @@ describe("connect mongo soajs test", function() {
 				}				
 			};
 			executeMyRequest(params, 'store', 'get', function(body, response) {
-				//console.log(body);
 				assert.ok(body);
 				assert.equal(body.result, true);
                 cookie = response.headers['set-cookie'];
-                //console.log(cookie);
                 assert.ok(cookie);
                 cookie = cookie[0].split(';');
                 cookie = cookie[0];
-                //console.log(cookie);
 				done();
 			});
 		});
@@ -84,13 +92,9 @@ describe("connect mongo soajs test", function() {
     describe("print stored session - test", function() {
         it('success ', function(done) {
             var params = {
-                qs: {
-                },
                 cookie: cookie
             };
             executeMyRequest(params, 'print', 'get', function(body, response) {
-                //console.log("hhh");
-                //console.log(body);
                 assert.ok(body);
                 assert.equal(body.result, true);
                 assert.equal(body.stored.name, "antoine");
@@ -107,7 +111,6 @@ describe("connect mongo soajs test", function() {
                 cookie: cookie
             };
             executeMyRequest(params, 'store', 'get', function(body, response) {
-                //console.log(body);
                 assert.ok(body);
                 assert.equal(body.result, true);
                 done();
@@ -117,13 +120,9 @@ describe("connect mongo soajs test", function() {
     describe("print stored session - test", function() {
         it('success ', function(done) {
             var params = {
-                qs: {
-                },
                 cookie: cookie
             };
             executeMyRequest(params, 'print', 'get', function(body, response) {
-                //console.log("hhh");
-                //console.log(body);
                 assert.ok(body);
                 assert.equal(body.result, true);
                 assert.equal(body.stored.name, "john");
@@ -131,5 +130,42 @@ describe("connect mongo soajs test", function() {
             });
         });
     });
-
+    describe("count stored session - test", function() {
+        it('success ', function(done) {
+            var params = {};
+            executeMyRequest(params, 'length', 'get', function(body, response) {
+                assert.ok(body);
+                assert.equal(body.result, true);
+                assert.equal(body.length, 1);
+                done();
+            });
+        });
+    });
+    describe("destroy session - test", function() {
+        it('success ', function(done) {
+            var params = {
+                cookie: cookie
+            };
+            executeMyRequest(params, 'destroy', 'get', function(body, response) {
+                assert.ok(body);
+                assert.equal(body.result, true);
+                assert.equal(body.destroy, 1);
+                done();
+            });
+        });
+    });
+    describe("print stored session - test", function() {
+        it('success ', function(done) {
+            var params = {
+                cookie: cookie
+            };
+            executeMyRequest(params, 'print', 'get', function(body, response) {
+                assert.ok(body);
+                console.log(body);
+                assert.equal(body.result, true);
+                assert.equal(body.stored, undefined);
+                done();
+            });
+        });
+    });
 });
