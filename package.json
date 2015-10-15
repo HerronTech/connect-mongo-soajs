@@ -1,7 +1,7 @@
 {
   "name": "connect-mongo-soajs",
   "description": "MongoDB session store for Express and Connect with full control over mongo configuration and no race conditions problems - unleashed",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "soajs team",
     "email": "team@soajs.org"
@@ -36,6 +36,6 @@
     "express-session" : "*"
   },
   "dependencies": {
-    "mongoskin" : "*"
+    "mongoskin" : "1.4.13"
   }
 }
