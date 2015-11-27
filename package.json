@@ -36,6 +36,6 @@
     "express-session" : "*"
   },
   "dependencies": {
-    "mongoskin" : "1.4.13"
+    "mongoskin" : "*"
   }
 }
