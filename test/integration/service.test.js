@@ -161,7 +161,6 @@ describe("connect mongo soajs test", function() {
             };
             executeMyRequest(params, 'print', 'get', function(body, response) {
                 assert.ok(body);
-                console.log(body);
                 assert.equal(body.result, true);
                 assert.equal(body.stored, undefined);
                 done();
