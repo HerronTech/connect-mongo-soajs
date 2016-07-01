@@ -123,7 +123,7 @@ Here is an example of dbConfig object:
 
 
 ## Full reference for **URLParam** & **extraParam**
-Below is a full configuration object, but Please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect)
+Below is a full configuration object, but Please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/)
 
     "URLParam": {
         "replicaSet": "rs",
@@ -155,16 +155,15 @@ Below is a full configuration object, but Please check out [mongodb website](htt
             "recordQueryStats": false,
             "retryMiliSeconds": 5000,
             "numberOfRetries": 5,
-            "bufferMaxEntries": -1
+            "bufferMaxEntries": 0
         },
         "server": {
             "readPreference": "primary",
             "ssl": false,
             "slaveOk": false,
             "poolSize": 1,
-            "socketOptions": {"noDelay": false, "keepAlive": 1, "connectTimeoutMS": 0, "socketTimeoutMS": 0},
+            "socketOptions": {"autoReconnect": false, noDelay": false, "keepAlive": 1, "connectTimeoutMS": 0, "socketTimeoutMS": 0},
             "logger": null,
-            "auto_reconnect": true,
             "disableDriverBSONSizeCheck": false
         },
         "replSet": {
