@@ -30,10 +30,13 @@ describe("testing connection", function() {
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true
+					"native_parser": true,
+					"bufferMaxEntries": 0
 				},
 				"server": {
-					"auto_reconnect": true
+					"socketOptions": {
+						"autoReconnect": false
+					}
 				}
 			},
 			'store': {},
@@ -72,10 +75,13 @@ describe("testing connection", function() {
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true
+					"native_parser": true,
+					"bufferMaxEntries": 0
 				},
 				"server": {
-					"auto_reconnect": true
+					"socketOptions": {
+						"autoReconnect": false
+					}
 				}
 			},
 			'store': {},
@@ -114,10 +120,13 @@ describe("TESTING soajs.mongo", function() {
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true
+					"native_parser": true,
+					"bufferMaxEntries": 0
 				},
 				"server": {
-					"auto_reconnect": true
+					"socketOptions": {
+						"autoReconnect": false
+					}
 				}
 			}
 		};
