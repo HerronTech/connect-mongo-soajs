@@ -34,9 +34,6 @@ module.exports = {
                 "bufferMaxEntries": 0
             },
             "server": {
-                "socketOptions": {
-                    "autoReconnect": false
-                }
             }
         },
         "collection": "sessions",

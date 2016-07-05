@@ -162,8 +162,9 @@ Below is a full configuration object, but Please check out [mongodb website](htt
             "ssl": false,
             "slaveOk": false,
             "poolSize": 1,
-            "socketOptions": {"autoReconnect": false, noDelay": false, "keepAlive": 1, "connectTimeoutMS": 0, "socketTimeoutMS": 0},
+            "socketOptions": {noDelay": false, "keepAlive": 1, "connectTimeoutMS": 0, "socketTimeoutMS": 0},
             "logger": null,
+            "autoReconnect": true,
             "disableDriverBSONSizeCheck": false
         },
         "replSet": {

@@ -34,9 +34,6 @@ describe("testing connection", function() {
 					"bufferMaxEntries": 0
 				},
 				"server": {
-					"socketOptions": {
-						"autoReconnect": false
-					}
 				}
 			},
 			'store': {},
@@ -79,9 +76,6 @@ describe("testing connection", function() {
 					"bufferMaxEntries": 0
 				},
 				"server": {
-					"socketOptions": {
-						"autoReconnect": false
-					}
 				}
 			},
 			'store': {},
@@ -124,9 +118,6 @@ describe("TESTING soajs.mongo", function() {
 					"bufferMaxEntries": 0
 				},
 				"server": {
-					"socketOptions": {
-						"autoReconnect": false
-					}
 				}
 			}
 		};
