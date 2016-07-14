@@ -59,10 +59,10 @@ Here is an example of dbConfig object:
         },
         "extraParam": {
             "db": {
-                "native_parser": true
+                "native_parser": true,
+                "bufferMaxEntries": 0
             },
             "server": {
-                "auto_reconnect": true
             }
         },
         'store': {},
@@ -97,10 +97,10 @@ Here is an example of dbConfig object:
         },
         "extraParam": {
             "db": {
-                "native_parser": true
+                "native_parser": true,
+                "bufferMaxEntries": 0
             },
             "server": {
-                "auto_reconnect": true
             }
         },
         'store': {},
@@ -123,7 +123,7 @@ Here is an example of dbConfig object:
 
 
 ## Full reference for **URLParam** & **extraParam**
-Below is a full configuration object, but Please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/)
+Below is how a configuration object should look like, but Please check out [mongodb website](http://mongodb.github.io/node-mongodb-native/)
 
     "URLParam": {
         "replicaSet": "rs",
@@ -133,56 +133,22 @@ Below is a full configuration object, but Please check out [mongodb website](htt
         "maxPoolSize": 5,
         "w": "majority",
         "wtimeoutMS": 0,
-        "journal": false,
-        "fsync": false,
-        "authSource": null,
-        "slaveOk": false,
-        "readPreference": "primary",
-        "readPreferenceTags": "TAG"
+        "readPreference": "secondaryPreferred",
+        "readPreferenceTags": "TAG",
+        ...
     },
     "extraParam": {
         "db": {
-            "w": "majority",
-            "wtimeout": 0,
-            "fsync": false,
-            "journal": false,
-            "readPreference": "primary",
-            "native_parser": true,
-            "forceServerObjectId": false,
-            "pkFactory": {},
-            "serializeFunctions": false,
-            "raw": false,
-            "recordQueryStats": false,
-            "retryMiliSeconds": 5000,
-            "numberOfRetries": 5,
-            "bufferMaxEntries": 0
+            ...
         },
         "server": {
-            "readPreference": "primary",
-            "ssl": false,
-            "slaveOk": false,
-            "poolSize": 1,
-            "socketOptions": {noDelay": false, "keepAlive": 1, "connectTimeoutMS": 0, "socketTimeoutMS": 0},
-            "logger": null,
-            "autoReconnect": true,
-            "disableDriverBSONSizeCheck": false
+            ...
         },
         "replSet": {
-            "ha": true,
-            "haInterval": 2000,
-            "reconnectWait": 1000,
-            "retries": 30,
-            "rs_name": "rs",
-            "socketOptions": null,
-            "readPreference": "primary",
-            "strategy": null,
-            "secondaryAcceptableLatencyMS": 15,
-            "connectArbiter": false
+            ...
 
         },
         "mongos": {
-            "socketOptions": null,
-            "ha": true,
-            "haInterval": 2000
+            ...
         }
     }
