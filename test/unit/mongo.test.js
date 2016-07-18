@@ -24,16 +24,13 @@ describe("testing connection", function() {
 				"connectTimeoutMS": 0,
 				"socketTimeoutMS": 0,
 				"maxPoolSize": 5,
-				"w": 1,
 				"wtimeoutMS": 0,
-				"slaveOk": true
+				"bufferMaxEntries": 0
 			},
 			"extraParam": {
 				"db": {
 					"native_parser": true,
-					"bufferMaxEntries": 0
-				},
-				"server": {
+					"slaveOk": true
 				}
 			},
 			'store': {},
@@ -66,14 +63,13 @@ describe("testing connection", function() {
 				"connectTimeoutMS": 0,
 				"socketTimeoutMS": 0,
 				"maxPoolSize": 5,
-				"w": 1,
 				"wtimeoutMS": 0,
-				"slaveOk": true
+				"bufferMaxEntries": 0
 			},
 			"extraParam": {
 				"db": {
 					"native_parser": true,
-					"bufferMaxEntries": 0
+					"slaveOk": true
 				},
 				"server": {
 				}
@@ -108,16 +104,13 @@ describe("TESTING soajs.mongo", function() {
 				"connectTimeoutMS": 0,
 				"socketTimeoutMS": 0,
 				"maxPoolSize": 5,
-				"w": 1,
 				"wtimeoutMS": 0,
-				"slaveOk": true
+				"bufferMaxEntries": 0
 			},
 			"extraParam": {
 				"db": {
 					"native_parser": true,
-					"bufferMaxEntries": 0
-				},
-				"server": {
+					"slaveOk": true
 				}
 			}
 		};

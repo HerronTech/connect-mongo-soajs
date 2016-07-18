@@ -26,14 +26,12 @@ module.exports = {
             "socketTimeoutMS": 0,
             "maxPoolSize": 5,
             "wtimeoutMS": 0,
-            "slaveOk": true
+            "bufferMaxEntries": 0
         },
         "extraParam": {
             "db": {
-                "native_parser": true,
-                "bufferMaxEntries": 0
-            },
-            "server": {
+                "slaveOk": true,
+                "native_parser": true
             }
         },
         "collection": "sessions",
