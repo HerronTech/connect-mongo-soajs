@@ -21,16 +21,11 @@ describe("testing connection", function() {
 				'password': 'admin'
 			},
 			"URLParam": {
-				"connectTimeoutMS": 0,
-				"socketTimeoutMS": 0,
-				"maxPoolSize": 5,
-				"wtimeoutMS": 0,
-				"bufferMaxEntries": 0
+				"maxPoolSize": 5
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true,
-					"slaveOk": true
+					"bufferMaxEntries": 0
 				}
 			},
 			'store': {},
@@ -60,18 +55,11 @@ describe("testing connection", function() {
 			],
 			"credentials": null,
 			"URLParam": {
-				"connectTimeoutMS": 0,
-				"socketTimeoutMS": 0,
-				"maxPoolSize": 5,
-				"wtimeoutMS": 0,
-				"bufferMaxEntries": 0
+				"maxPoolSize": 5
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true,
-					"slaveOk": true
-				},
-				"server": {
+					"bufferMaxEntries": 0
 				}
 			},
 			'store': {},
@@ -101,16 +89,11 @@ describe("TESTING soajs.mongo", function() {
 			],
 			"credentials": {},
 			"URLParam": {
-				"connectTimeoutMS": 0,
-				"socketTimeoutMS": 0,
-				"maxPoolSize": 5,
-				"wtimeoutMS": 0,
-				"bufferMaxEntries": 0
+				"maxPoolSize": 5
 			},
 			"extraParam": {
 				"db": {
-					"native_parser": true,
-					"slaveOk": true
+					"bufferMaxEntries": 0
 				}
 			}
 		};

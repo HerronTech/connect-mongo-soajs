@@ -22,16 +22,11 @@ module.exports = {
         ],
         "credentials": null,
         "URLParam": {
-            "connectTimeoutMS": 0,
-            "socketTimeoutMS": 0,
-            "maxPoolSize": 5,
-            "wtimeoutMS": 0,
-            "bufferMaxEntries": 0
+            "maxPoolSize": 5
         },
         "extraParam": {
             "db": {
-                "slaveOk": true,
-                "native_parser": true
+                "bufferMaxEntries": 0
             }
         },
         "collection": "sessions",
